@@ -2,10 +2,7 @@ package com.sparta.springresttemplateclient.Controller;
 
 import com.sparta.springresttemplateclient.Dto.ItemDto;
 import com.sparta.springresttemplateclient.Service.RestTemplateService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -38,4 +35,6 @@ public class RestTemplateController {
     public List<ItemDto> exchangeCall(@RequestHeader("Authorization") String token) {
         return restTemplateService.exchangeCall(token);
     }
+
+
 }
